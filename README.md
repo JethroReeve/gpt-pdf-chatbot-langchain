@@ -1,4 +1,5 @@
 #This fork contains no edits to code except the webpage text. The pdfs have been altered.
+#Corpus1 attached to assessment files can be placed in docs folder for music-neuroscience version.
 
 # GPT-4 & LangChain - Create a ChatGPT Chatbot for Your PDF Files
 
