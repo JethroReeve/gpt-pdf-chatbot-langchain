@@ -1,3 +1,5 @@
+#This fork contains no edits to code except the webpage text. The pdfs have been altered.
+
 # GPT-4 & LangChain - Create a ChatGPT Chatbot for Your PDF Files
 
 Use the new GPT-4 api to build a chatGPT chatbot for multiple Large PDF files.
