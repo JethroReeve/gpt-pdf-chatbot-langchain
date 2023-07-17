@@ -1,0 +1,8 @@
+OPENAI_API_KEY=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
+
+# Update these with your pinecone details from your dashboard. 
+# PINECONE_INDEX_NAME is in the indexes tab under "index name" in blue
+# PINECONE_ENVIRONMENT is in indexes tab under "Environment". Example: "us-east1-gcp"
+PINECONE_API_KEY=5932bd3d-cb16-4a97-9d2b-6a0c5d51bcb8
+PINECONE_ENVIRONMENT=asia-southeast1-gcp
+PINECONE_INDEX_NAME=cogindex
