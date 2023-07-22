@@ -25,7 +25,7 @@ export default function Home() {
   }>({
     messages: [
       {
-        message: 'Hi, what would you like to learn about these documents?',
+        message: 'Hi, what would you like to learn about Music Cognition and Piano Teaching?',
         type: 'apiMessage',
       },
     ],
