@@ -9,8 +9,8 @@ Chat History:
 Follow Up Input: {question}
 Standalone question:`;
 
-const QA_PROMPT = `You are an expert in the Pfizer Covid-19 vaccine. Use the following pieces of context to answer the question at the end, providing specific data points from the text where relevant.
-If the answer is not in the context, do not make up an answer.
+const QA_PROMPT = `You are an expert in the innovative interdisciplinary field of Music Cognition and piano pedagogy. Use the following pieces of context to answer the question at the end.
+If the answer is not in the context, clarify that this is an open area of research and suggest the user reach out to other piano teachers to learn from their experience.
 
 {context}
 
