@@ -4,7 +4,6 @@ export default function Document() {
     return (
       <Html>
         <Head>
-          <link rel="stylesheet" href="/assets/css/main.css" />
           <script defer src="/assets/js/jquery.min.js"></script>
           <script defer src="/assets/js/browser.min.js"></script>
           <script defer src="/assets/js/breakpoints.min.js"></script>

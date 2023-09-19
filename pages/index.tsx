@@ -153,7 +153,7 @@ export default function Home() {
 
 									<div className="mx-auto flex flex-col gap-4">
 									<h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
-										Ask questions about Labour's policy plans, and understand how they relate with national social attitudes
+										Ask questions about Labour&#39;s policy plans, and understand how they relate with national social attitudes
 									</h1>
 									<main className={styles.main}>
 										<div className={styles.cloud}>
@@ -292,11 +292,9 @@ export default function Home() {
 									</footer>
 									</div>
 
-									<span className="image main"><img src="images/pic11.jpg" alt="" /></span>
+									{/* <span className="image main"><Image src="images/pic11.jpg" alt="" /></span> */}
 
-									<p>The prevailing idea in UK media is that Labour is likely to win the general election in January 2025 (latest). 
-									<a href="https://www.ft.com/video/1ba870d3-fd96-453a-aabc-2a35337a5830?emailId=463c0f60-092d-4a1b-b43e-61a188a79276&segmentId=c393f5a6-b640-bff3-cc14-234d058790ed" target="_blank" rel="noopener noreferrer">
-										  Check out this neat FT video on this.
+									<p>The prevailing idea in UK media is that Labour is likely to win the general election in January 2025 (latest). <a href="https://www.ft.com/video/1ba870d3-fd96-453a-aabc-2a35337a5830?emailId=463c0f60-092d-4a1b-b43e-61a188a79276&segmentId=c393f5a6-b640-bff3-cc14-234d058790ed" target="_blank" rel="noopener noreferrer"> Check out this neat FT video on this.
 									</a>
 									</p>
 									<p>
