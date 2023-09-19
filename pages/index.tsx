@@ -12,6 +12,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import Head from 'next/head';
 
 export default function Home() {
   const [query, setQuery] = useState<string>('');
@@ -25,7 +26,7 @@ export default function Home() {
   }>({
     messages: [
       {
-        message: 'Hi, what would you like to learn about Music Cognition and Piano Teaching?',
+        message: "Hey, I'm here to answer your questions about Labour party's latest policy release and contextualise it with data from public attitudes surveys. What would you like to know about first?",
         type: 'apiMessage',
       },
     ],
@@ -123,148 +124,204 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <div className="mx-auto flex flex-col gap-4">
-          <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
-            Chat With Your Docs
-          </h1>
-          <main className={styles.main}>
-            <div className={styles.cloud}>
-              <div ref={messageListRef} className={styles.messagelist}>
-                {messages.map((message, index) => {
-                  let icon;
-                  let className;
-                  if (message.type === 'apiMessage') {
-                    icon = (
-                      <Image
-                        key={index}
-                        src="/bot-image.png"
-                        alt="AI"
-                        width="40"
-                        height="40"
-                        className={styles.boticon}
-                        priority
-                      />
-                    );
-                    className = styles.apimessage;
-                  } else {
-                    icon = (
-                      <Image
-                        key={index}
-                        src="/usericon.png"
-                        alt="Me"
-                        width="30"
-                        height="30"
-                        className={styles.usericon}
-                        priority
-                      />
-                    );
-                    // The latest message sent by the user will be animated while waiting for a response
-                    className =
-                      loading && index === messages.length - 1
-                        ? styles.usermessagewaiting
-                        : styles.usermessage;
-                  }
-                  return (
-                    <>
-                      <div key={`chatMessage-${index}`} className={className}>
-                        {icon}
-                        <div className={styles.markdownanswer}>
-                          <ReactMarkdown linkTarget="_blank">
-                            {message.message}
-                          </ReactMarkdown>
-                        </div>
-                      </div>
-                      {message.sourceDocs && (
-                        <div
-                          className="p-5"
-                          key={`sourceDocsAccordion-${index}`}
-                        >
-                          <Accordion
-                            type="single"
-                            collapsible
-                            className="flex-col"
-                          >
-                            {message.sourceDocs.map((doc, index) => (
-                              <div key={`messageSourceDocs-${index}`}>
-                                <AccordionItem value={`item-${index}`}>
-                                  <AccordionTrigger>
-                                    <h3>Source {index + 1}</h3>
-                                  </AccordionTrigger>
-                                  <AccordionContent>
-                                    <ReactMarkdown linkTarget="_blank">
-                                      {doc.pageContent}
-                                    </ReactMarkdown>
-                                    <p className="mt-2">
-                                      <b>Source:</b> {doc.metadata.source}
-                                    </p>
-                                  </AccordionContent>
-                                </AccordionItem>
-                              </div>
-                            ))}
-                          </Accordion>
-                        </div>
-                      )}
-                    </>
-                  );
-                })}
-              </div>
-            </div>
-            <div className={styles.center}>
-              <div className={styles.cloudform}>
-                <form onSubmit={handleSubmit}>
-                  <textarea
-                    disabled={loading}
-                    onKeyDown={handleEnter}
-                    ref={textAreaRef}
-                    autoFocus={false}
-                    rows={1}
-                    maxLength={512}
-                    id="userInput"
-                    name="userInput"
-                    placeholder={
-                      loading
-                        ? 'Waiting for response...'
-                        : 'Type a question'
-                    }
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    className={styles.textarea}
-                  />
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className={styles.generatebutton}
-                  >
-                    {loading ? (
-                      <div className={styles.loadingwheel}>
-                        <LoadingDots color="#000" />
-                      </div>
-                    ) : (
-                      // Send icon SVG in input field
-                      <svg
-                        viewBox="0 0 20 20"
-                        className={styles.svgicon}
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
-                      </svg>
-                    )}
-                  </button>
-                </form>
-              </div>
-            </div>
-            {error && (
-              <div className="border border-red-400 rounded-md p-4">
-                <p className="text-red-500">{error}</p>
-              </div>
-            )}
-          </main>
-        </div>
-        <footer className="m-auto p-4">
-          <a href="https://twitter.com/mayowaoshin">
-            Powered by LangChainAI. Demo built by Mayo (Twitter: @mayowaoshin).
-          </a>
-        </footer>
+		<Head>
+			<title>Labour Policy ChatBot</title>
+			<meta charSet="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		</Head>
+		<body className="is-preload">
+
+			{/*wrapper*/}
+				<div id="wrapper">
+
+				{/*Main*/}
+					<div id="main">
+						<div className="inner">
+
+							{/*Header*/}
+								<header id="header">
+									<a href="index.html" className="logo"><strong>Labour Policy Chatbot</strong> Jethro Reeve & @Mayowaoshin</a>
+									<ul className="icons">
+										<li><a href="https://twitter.com/JethroJethroR" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
+										<li><a href="https://www.linkedin.com/in/jethroreeve/" className="icon brands fa-linkedin"><span className="label">Linkedin</span></a></li>
+										<li><a href="#" className="icon brands fa-medium-m"><span className="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							{/*Content*/}
+								<section>
+
+									<div className="mx-auto flex flex-col gap-4">
+									<h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
+										Ask questions about Labour's policy plans, and understand how they relate with national social attitudes
+									</h1>
+									<main className={styles.main}>
+										<div className={styles.cloud}>
+										<div ref={messageListRef} className={styles.messagelist}>
+											{messages.map((message, index) => {
+											let icon;
+											let className;
+											if (message.type === 'apiMessage') {
+												icon = (
+												<Image
+													src="/person.webp"
+													alt="AI"
+													width="40"
+													height="40"
+													className={styles.boticon}
+													priority
+												/>
+												);
+												className = styles.apimessage;
+											} else {
+												icon = (
+												<Image
+													src="/red_rose.webp"
+													alt="Me"
+													width="30"
+													height="30"
+													className={styles.usericon}
+													priority
+												/>
+												);
+												// The latest message sent by the user will be animated while waiting for a response
+												className =
+												loading && index === messages.length - 1
+													? styles.usermessagewaiting
+													: styles.usermessage;
+											}
+											return (
+												<>
+												<div key={`chatMessage-${index}`} className={className}>
+													{icon}
+													<div className={styles.markdownanswer}>
+													<ReactMarkdown linkTarget="_blank">
+														{message.message}
+													</ReactMarkdown>
+													</div>
+												</div>
+												{message.sourceDocs && (
+													<div
+													className="p-5"
+													key={`sourceDocsAccordion-${index}`}
+													>
+													<Accordion
+														type="single"
+														collapsible
+														className="flex-col"
+													>
+														{message.sourceDocs.map((doc, index) => (
+														<div key={`messageSourceDocs-${index}`}>
+															<AccordionItem value={`item-${index}`}>
+															<AccordionTrigger>
+																<h3>Source {index + 1}</h3>
+															</AccordionTrigger>
+															<AccordionContent>
+																<ReactMarkdown linkTarget="_blank">
+																{doc.pageContent}
+																</ReactMarkdown>
+																<p className="mt-2">
+																<b>Source:</b> {doc.metadata.source}
+																</p>
+															</AccordionContent>
+															</AccordionItem>
+														</div>
+														))}
+													</Accordion>
+													</div>
+												)}
+												</>
+											);
+											})}
+										</div>
+										</div>
+										<div className={styles.center}>
+										<div className={styles.cloudform}>
+											<form onSubmit={handleSubmit}>
+											<textarea
+												disabled={loading}
+												onKeyDown={handleEnter}
+												ref={textAreaRef}
+												autoFocus={false}
+												rows={1}
+												maxLength={512}
+												id="userInput"
+												name="userInput"
+												placeholder={
+												loading
+													? 'Waiting for response...'
+													: 'Type a question'
+												}
+												value={query}
+												onChange={(e) => setQuery(e.target.value)}
+												className={styles.textarea}
+											/>
+											<button
+												type="submit"
+												disabled={loading}
+												className={styles.generatebutton}
+											>
+												{loading ? (
+												<div className={styles.loadingwheel}>
+													<LoadingDots color="#000" />
+												</div>
+												) : (
+												// Send icon SVG in input field
+												<svg
+													viewBox="0 0 20 20"
+													className={styles.svgicon}
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+												</svg>
+												)}
+											</button>
+											</form>
+										</div>
+										</div>
+										{error && (
+										<div className="border border-red-400 rounded-md p-4">
+											<p className="text-red-500">{error}</p>
+										</div>
+										)}
+									</main>
+									<footer className="m-auto p-4">
+									<a href="https://twitter.com/mayowaoshin">
+										Powered by LangChainAI. Demo built by Mayo (Twitter: @mayowaoshin).
+									</a>
+									</footer>
+									</div>
+
+									<span className="image main"><img src="images/pic11.jpg" alt="" /></span>
+
+									<p>The prevailing idea in UK media is that Labour is likely to win the general election in January 2025 (latest). 
+									<a href="https://www.ft.com/video/1ba870d3-fd96-453a-aabc-2a35337a5830?emailId=463c0f60-092d-4a1b-b43e-61a188a79276&segmentId=c393f5a6-b640-bff3-cc14-234d058790ed" target="_blank" rel="noopener noreferrer">
+										  Check out this neat FT video on this.
+									</a>
+									</p>
+									<p>
+									This chatbot is designed to make it easy to understand their policy as it relates to you, as well as the social attitudes other Brits have which may have led to it.
+									</p>
+									<p>
+									This project uses the GPT-3 language model by OpenAI.
+									</p>
+
+									<hr className="major" />
+
+								</section>
+
+						</div>
+					</div>
+				</div>
+
+			{/*scripts*/}
+				{/* <script src="assets/js/jquery.min.js"></script>
+				<script src="assets/js/browser.min.js"></script>
+				<script src="assets/js/breakpoints.min.js"></script>
+				<script src="assets/js/util.js"></script>
+				<script src="assets/js/main.js"></script> */}
+
+		</body>
       </Layout>
     </>
   );
