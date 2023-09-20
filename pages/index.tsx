@@ -140,7 +140,7 @@ export default function Home() {
 
 							{/*Header*/}
 								<header id="header">
-									<a href="index.html" className="logo"><strong>Labour Policy Chatbot</strong> Jethro Reeve & @Mayowaoshin</a>
+									<a href="jethroreeve.github.io" className="logo"><strong>Labour Policy Chatbot</strong> Jethro Reeve & @Mayowaoshin</a>
 									<ul className="icons">
 										<li><a href="https://twitter.com/JethroJethroR" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
 										<li><a href="https://www.linkedin.com/in/jethroreeve/" className="icon brands fa-linkedin"><span className="label">Linkedin</span></a></li>
@@ -294,11 +294,11 @@ export default function Home() {
 
 									{/* <span className="image main"><Image src="images/pic11.jpg" alt="" /></span> */}
 
-									<p>The prevailing idea in UK media is that Labour is likely to win the general election in January 2025 (latest). <a href="https://www.ft.com/video/1ba870d3-fd96-453a-aabc-2a35337a5830?emailId=463c0f60-092d-4a1b-b43e-61a188a79276&segmentId=c393f5a6-b640-bff3-cc14-234d058790ed" target="_blank" rel="noopener noreferrer"> Check out this neat FT video on this.
+									<p>UK media and political spheres anticipate that Labour will win the general election taking place in January 2025 (latest). <a href="https://www.ft.com/video/1ba870d3-fd96-453a-aabc-2a35337a5830?emailId=463c0f60-092d-4a1b-b43e-61a188a79276&segmentId=c393f5a6-b640-bff3-cc14-234d058790ed" target="_blank" rel="noopener noreferrer"> Check out this neat FT video on the topic.
 									</a>
 									</p>
 									<p>
-									This chatbot is designed to make it easy to understand their policy as it relates to you, as well as the social attitudes other Brits have which may have led to it.
+									This chatbot is designed to make it easy to understand their policy as it relates to you, as well as the related <a href="https://natcen.ac.uk/publications/british-social-attitudes-39-broken-britain">attitudes of other Brits</a>.
 									</p>
 									<p>
 									This project uses the GPT-3 language model by OpenAI.
