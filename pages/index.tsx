@@ -294,12 +294,12 @@ export default function Home() {
 
 									{/* <span className="image main"><Image src="images/pic11.jpg" alt="" /></span> */}
 
-									<p>UK media and political spheres anticipate that Labour will win the general election taking place in January 2025 (latest). <a href="https://www.ft.com/video/1ba870d3-fd96-453a-aabc-2a35337a5830?emailId=463c0f60-092d-4a1b-b43e-61a188a79276&segmentId=c393f5a6-b640-bff3-cc14-234d058790ed" target="_blank" rel="noopener noreferrer"> Check out this neat FT video on the topic.
-									</a>
+									<br></br><p>UK media and political spheres anticipate that Labour will win the general election taking place in January 2025 (latest). <a href="https://www.ft.com/video/1ba870d3-fd96-453a-aabc-2a35337a5830?emailId=463c0f60-092d-4a1b-b43e-61a188a79276&segmentId=c393f5a6-b640-bff3-cc14-234d058790ed" target="_blank" rel="noopener noreferrer"> Check out this neat FT video on the topic.
+									</a><br></br>
 									</p>
 									<p>
 									This chatbot is designed to make it easy to understand their policy as it relates to you, as well as the related <a href="https://natcen.ac.uk/publications/british-social-attitudes-39-broken-britain">attitudes of other Brits</a>.
-									</p>
+									</p><br></br>
 									<p>
 									This project uses the GPT-3 language model by OpenAI.
 									</p>
