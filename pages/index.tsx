@@ -164,7 +164,7 @@ export default function Home() {
 											if (message.type === 'apiMessage') {
 												icon = (
 												<Image
-													src="/person.webp"
+													src="/red_rose.webp"
 													alt="AI"
 													width="40"
 													height="40"
@@ -176,7 +176,7 @@ export default function Home() {
 											} else {
 												icon = (
 												<Image
-													src="/red_rose.webp"
+													src="/person.webp"
 													alt="Me"
 													width="30"
 													height="30"
